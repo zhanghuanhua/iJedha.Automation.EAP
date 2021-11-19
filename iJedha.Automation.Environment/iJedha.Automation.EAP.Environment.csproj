@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{167A00CD-DD94-434C-85E2-CD96E9428415}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>iJedha.Automation.EAP.Environment</RootNamespace>
+    <AssemblyName>iJedha.Automation.EAP.Environment</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\bin\Debug\iJedha.EAP\ClassLib\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\bin\Release\iJedha.EAP\ClassLib\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>none</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="iJedha.Automation.AMS.Service, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\bin\Debug\iJedha.EAP\ClassLib\iJedha.Automation.AMS.Service.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="iJedha.Automation.EAP.Core">
+      <HintPath>..\bin\Debug\iJedha.EAP\BaseDll\iJedha.Automation.EAP.Core.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="iJedha.Automation.EAP.Library, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\bin\Debug\iJedha.EAP\ClassLib\iJedha.Automation.EAP.Library.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="iJedha.Automation.EAP.LibraryBase">
+      <HintPath>..\bin\Debug\iJedha.EAP\BaseDll\iJedha.Automation.EAP.LibraryBase.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="iJedha.Automation.EAP.Model, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\bin\Debug\iJedha.EAP\ClassLib\iJedha.Automation.EAP.Model.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="iJedha.Automation.EAP.ModelBase">
+      <HintPath>..\bin\Debug\iJedha.EAP\BaseDll\iJedha.Automation.EAP.ModelBase.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="iJedha.Automation.EAP.MQService">
+      <HintPath>..\bin\Debug\iJedha.EAP\BaseDll\iJedha.Automation.EAP.MQService.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="iJedha.Automation.EAP.Serial, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\bin\Debug\iJedha.EAP\ClassLib\iJedha.Automation.EAP.Serial.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="iJedha.SocketMessageStructure">
+      <HintPath>..\bin\Debug\iJedha.EAP\BaseDll\iJedha.SocketMessageStructure.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="RabbitMQ.Client">
+      <HintPath>..\bin\Debug\iJedha.EAP\BaseDll\RabbitMQ.Client.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\GlobalAssemblyInfo.cs">
+      <Link>Properties\GlobalAssemblyInfo.cs</Link>
+    </Compile>
+    <Compile Include="BaseComm.cs" />
+    <Compile Include="Environment.cs" />
+    <Compile Include="FileHistory\EAP_EQP_TESTRESULT_FILE.cs" />
+    <Compile Include="FileHistory\EAP_EQP_STATUS_FILE.cs" />
+    <Compile Include="FileHistory\EAP_EQP_ALM_FILE.cs" />
+    <Compile Include="History\EAP_EQP_EVENTHISTORY.cs" />
+    <Compile Include="FileHistory\EAP_EQP_PROCESSDATA_FILE.cs" />
+    <Compile Include="History\EAP_EQP_PROCESSDATAName.cs" />
+    <Compile Include="History\History_Common.cs" />
+    <Compile Include="History\EAP_EQP_STATUS.cs" />
+    <Compile Include="History\EAP_EQP_PROCESSDATA.cs" />
+    <Compile Include="History\EAP_EQP_ALM.cs" />
+    <Compile Include="History\EAP_EQP_TRACE.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

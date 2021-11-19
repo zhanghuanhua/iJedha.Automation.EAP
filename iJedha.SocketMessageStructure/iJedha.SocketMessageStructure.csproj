@@ -1,0 +1,142 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{DDC30CB0-6211-41E8-8049-2B1EC7F50995}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>iJedha.SocketMessageStructure</RootNamespace>
+    <AssemblyName>iJedha.SocketMessageStructure</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\bin\Debug\iJedha.EAP\ClassLib\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>none</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Enum.cs" />
+    <Compile Include="Message\FileProcessDataReport.cs" />
+    <Compile Include="Message\ScrapPanelReportReply.cs" />
+    <Compile Include="Message\ScrapPanelReport.cs" />
+    <Compile Include="Message\AbnormalPanelReport.cs" />
+    <Compile Include="Message\AbnormalPanelReportReply.cs" />
+    <Compile Include="Message\AreYouThereRequest.cs" />
+    <Compile Include="Message\AreYouThereRequestReply.cs" />
+    <Compile Include="Message\Body.cs" />
+    <Compile Include="Message\CarrierReadReport.cs" />
+    <Compile Include="Message\CarrierReadReportReply.cs" />
+    <Compile Include="Message\CIMMessageCommand.cs" />
+    <Compile Include="Message\CIMMessageCommandReply.cs" />
+    <Compile Include="Message\ControlModeCommand.cs" />
+    <Compile Include="Message\ControlModeCommandReply.cs" />
+    <Compile Include="Message\DateTimeSyncCommand.cs" />
+    <Compile Include="Message\DateTimeSyncReply.cs" />
+    <Compile Include="Message\EquipmentAlarmReport.cs" />
+    <Compile Include="Message\EquipmentAlarmReportReply.cs" />
+    <Compile Include="Message\EquipmentControlMode.cs" />
+    <Compile Include="Message\EquipmentControlModeReply.cs" />
+    <Compile Include="Message\EquipmentCurrentDateTime.cs" />
+    <Compile Include="Message\EquipmentCurrentDateTimeReply.cs" />
+    <Compile Include="Message\EquipmentCurrentRecipe.cs" />
+    <Compile Include="Message\EquipmentCurrentRecipeReply.cs" />
+    <Compile Include="Message\EquipmentCurrentStatus.cs" />
+    <Compile Include="Message\EquipmentCurrentStatusReply.cs" />
+    <Compile Include="Message\EquipmentJobDataProcessReport_ReturnLine.cs" />
+    <Compile Include="Message\EquipmentJobDataProcessReport.cs" />
+    <Compile Include="Message\EquipmentJobDataProcessReportReply.cs" />
+    <Compile Include="Message\EquipmentJobDataRequest.cs" />
+    <Compile Include="Message\EquipmentJobDataRequestReply.cs" />
+    <Compile Include="Message\EquipmentOperationMode.cs" />
+    <Compile Include="Message\EquipmentOperationModeReply.cs" />
+    <Compile Include="Message\EquipmentRecipeModifyReport.cs" />
+    <Compile Include="Message\ScanCodeReportReply.cs" />
+    <Compile Include="Message\ScanCodeReport.cs" />
+    <Compile Include="Message\RecipeModifyReportReply.cs" />
+    <Compile Include="Message\EquipmentRecipeSetupReport.cs" />
+    <Compile Include="Message\EquipmentRecipeSetupReportReply.cs" />
+    <Compile Include="Message\Header.cs" />
+    <Compile Include="Message\InitialDataReply.cs" />
+    <Compile Include="Message\InitialDataRequest.cs" />
+    <Compile Include="Message\JobDataDownload.cs" />
+    <Compile Include="Message\JobDataDownloadReply.cs" />
+    <Compile Include="Message\JobDataModifyCommand.cs" />
+    <Compile Include="Message\JobDataModifyCommandReply.cs" />
+    <Compile Include="Message\MaterialReadReport.cs" />
+    <Compile Include="Message\MaterialReadReportReply.cs" />
+    <Compile Include="Message\Message.cs" />
+    <Compile Include="Message\OperatorLoginConfirm.cs" />
+    <Compile Include="Message\OperatorLoginConfirmReply.cs" />
+    <Compile Include="Message\OperatorLoginLogoutReport.cs" />
+    <Compile Include="Message\OperatorLoginLogoutReportReply.cs" />
+    <Compile Include="Message\PanelInReport.cs" />
+    <Compile Include="Message\PanelInReportReply.cs" />
+    <Compile Include="Message\PanelOutReport.cs" />
+    <Compile Include="Message\PanelOutReportReply.cs" />
+    <Compile Include="Message\PanelReadReport.cs" />
+    <Compile Include="Message\PanelReadReportReply.cs" />
+    <Compile Include="Message\PortStatusReport.cs" />
+    <Compile Include="Message\PortStatusReportReply.cs" />
+    <Compile Include="Message\ProcessDataReport.cs" />
+    <Compile Include="Message\ProcessDataReportReply.cs" />
+    <Compile Include="Message\RecipeParameterRequest.cs" />
+    <Compile Include="Message\RecipeParameterRequestReply.cs" />
+    <Compile Include="Message\RemoteControlCommand.cs" />
+    <Compile Include="Message\RemoteControlCommandReply.cs" />
+    <Compile Include="Message\Return.cs" />
+    <Compile Include="Message\RGVDispatchCommand.cs" />
+    <Compile Include="Message\RGVDispatchCommandReply.cs" />
+    <Compile Include="Message\RGVDispatchResultReport.cs" />
+    <Compile Include="Message\RGVDispatchResultReportReply.cs" />
+    <Compile Include="Message\ToolsStatusReport.cs" />
+    <Compile Include="Message\ToolsStatusReportReply.cs" />
+    <Compile Include="Message\TraceDataRequest.cs" />
+    <Compile Include="Message\TraceDataRequestReply.cs" />
+    <Compile Include="Message\TrayStatusReport.cs" />
+    <Compile Include="Message\TrayStatusReportReply.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

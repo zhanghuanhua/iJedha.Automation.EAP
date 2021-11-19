@@ -1,0 +1,142 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B15DF013-EC95-49FD-818B-EFE2A844383F}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>iJedha.Automation.EAP.WebAPI</RootNamespace>
+    <AssemblyName>iJedha.Automation.EAP.WebAPI</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\bin\Debug\iJedha.EAP\ClassLib\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="iJedha.Automation.EAP.Core">
+      <HintPath>..\bin\Debug\iJedha.EAP\BaseDll\iJedha.Automation.EAP.Core.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="iJedha.Automation.EAP.Environment, Version=2.2020.327.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\bin\Debug\iJedha.EAP\ClassLib\iJedha.Automation.EAP.Environment.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="iJedha.Automation.EAP.HostService, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\bin\Debug\iJedha.EAP\ClassLib\iJedha.Automation.EAP.HostService.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="iJedha.Automation.EAP.Library, Version=2020.202.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\bin\Debug\iJedha.EAP\ClassLib\iJedha.Automation.EAP.Library.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="iJedha.Automation.EAP.LibraryBase">
+      <HintPath>..\bin\Debug\iJedha.EAP\BaseDll\iJedha.Automation.EAP.LibraryBase.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="iJedha.Automation.EAP.Model, Version=2020.202.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\bin\Debug\iJedha.EAP\ClassLib\iJedha.Automation.EAP.Model.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="iJedha.Automation.EAP.ModelBase">
+      <HintPath>..\bin\Debug\iJedha.EAP\BaseDll\iJedha.Automation.EAP.ModelBase.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="iJedha.Automation.EAP.MQService">
+      <HintPath>..\bin\Debug\iJedha.EAP\BaseDll\iJedha.Automation.EAP.MQService.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Web.Http">
+      <HintPath>..\bin\Debug\iJedha.EAP\BaseDll\System.Web.Http.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\GlobalAssemblyInfo.cs">
+      <Link>Properties\GlobalAssemblyInfo.cs</Link>
+    </Compile>
+    <Compile Include="Client\MES\01_EAP_AliveCheckRequest.cs" />
+    <Compile Include="Client\MES\02_EAP_MaterialLotInfoRequest.cs" />
+    <Compile Include="Client\MES\02_EAP_LotInfoRequestKL.cs" />
+    <Compile Include="Client\MES\09_EAP_LotTrackInKL.cs" />
+    <Compile Include="Client\MES\10_EAP_LotTrackOutKL.cs" />
+    <Compile Include="Client\MES\15_EAP_MES_EquipmentDataCollection.cs" />
+    <Compile Include="Client\MES\22_EAP_TrainingRequest.cs" />
+    <Compile Include="Client\MES\11_EAP_EqpStatusReport.cs" />
+    <Compile Include="Client\MES\04_EAP_AlarmReport.cs" />
+    <Compile Include="Client\MES\05_EAP_LoadReuqest.cs" />
+    <Compile Include="Client\MES\06_EAP_LoadComplete.cs" />
+    <Compile Include="Client\MES\07_EAP_UnLoadRequest.cs" />
+    <Compile Include="Client\MES\08_EAP_UnLoadComplete.cs" />
+    <Compile Include="Client\MES\09_EAP_LotTrackIn.cs" />
+    <Compile Include="Client\MES\10_EAP_LotTrackOut.cs" />
+    <Compile Include="Client\MES\02_EAP_LotInfoRequest.cs" />
+    <Compile Include="Client\MES\17_EAP_EqpHoldReport.cs" />
+    <Compile Include="Client\MES\23_EAP_EqpModeRequest.cs" />
+    <Compile Include="Client\MES\13_EAP_LotHold.cs" />
+    <Compile Include="Client\MES\19_EAP_EquipmentSetUp.cs" />
+    <Compile Include="Client\MES\18_EAP_MaterialSetUp.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Server\AGV\02_AGV_TransferCompleteReport.cs" />
+    <Compile Include="Server\AGV\01_AGV_SafetySignalRequest.cs" />
+    <Compile Include="Server\GUI\01_GUI_ControlModeCommand.cs" />
+    <Compile Include="Server\GUI\02_GUI_RemoteControlCommand.cs" />
+    <Compile Include="Server\GUI\13_GUI_InitialLoadRequestFlag.cs" />
+    <Compile Include="Server\GUI\12_GUI_LotInfoRequest.cs" />
+    <Compile Include="Server\GUI\11_GUI_TrackOutCommand.cs" />
+    <Compile Include="Server\GUI\10_GUI_UnloadRequest.cs" />
+    <Compile Include="Server\GUI\09_GUI_LoadRequest.cs" />
+    <Compile Include="Server\GUI\08_GUI_CloseJobData.cs" />
+    <Compile Include="Server\GUI\07_GUI_JobDataDownload.cs" />
+    <Compile Include="Server\GUI\06_GUI_EqInfoRequest.cs" />
+    <Compile Include="Server\GUI\05_GUI_TrackInCommand.cs" />
+    <Compile Include="Server\GUI\03_GUI_JobDataModifyCommand.cs" />
+    <Compile Include="Server\GUI\04_GUI_JobDataDownloadCommand.cs" />
+    <Compile Include="Server\MES\03_MES_TrackInInfo.cs" />
+    <Compile Include="Server\MES\12_MES_FirstInspResult.cs" />
+    <Compile Include="Server\MES\20_MES_TaskCount.cs" />
+    <Compile Include="Server\MES\16_MES_EqpHoldReport.cs" />
+    <Compile Include="Server\MES\21_MES_RGVDispatch.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

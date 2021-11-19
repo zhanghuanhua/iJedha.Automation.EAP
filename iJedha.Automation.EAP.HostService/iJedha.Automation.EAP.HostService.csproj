@@ -1,0 +1,124 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{981C5EA6-B42F-42F4-9B17-08F882C83436}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>iJedha.Automation.EAP.HostService</RootNamespace>
+    <AssemblyName>iJedha.Automation.EAP.HostService</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\bin\Debug\iJedha.EAP\ClassLib\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="iJedha.Automation.EAP.Core">
+      <HintPath>..\bin\Debug\iJedha.EAP\BaseDll\iJedha.Automation.EAP.Core.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="iJedha.Automation.EAP.Environment, Version=2.2020.824.2, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\bin\Debug\iJedha.EAP\ClassLib\iJedha.Automation.EAP.Environment.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="iJedha.Automation.EAP.Library, Version=2.2020.824.2, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\bin\Debug\iJedha.EAP\ClassLib\iJedha.Automation.EAP.Library.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="iJedha.Automation.EAP.LibraryBase">
+      <HintPath>..\bin\Debug\iJedha.EAP\BaseDll\iJedha.Automation.EAP.LibraryBase.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="iJedha.Automation.EAP.Model, Version=2.2020.824.2, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\bin\Debug\iJedha.EAP\ClassLib\iJedha.Automation.EAP.Model.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="iJedha.Automation.EAP.ModelBase">
+      <HintPath>..\bin\Debug\iJedha.EAP\BaseDll\iJedha.Automation.EAP.ModelBase.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="iJedha.SocketMessageStructure, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\bin\Debug\iJedha.EAP\ClassLib\iJedha.SocketMessageStructure.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Interface\01.AreYouThereRequest.cs" />
+    <Compile Include="Interface\01.AreYouThereRequestReply.cs" />
+    <Compile Include="Interface\02.InitialDataRequest.cs" />
+    <Compile Include="Interface\03.DateTimeSyncCommand.cs" />
+    <Compile Include="Interface\07.JobDataDownload_Material.cs" />
+    <Compile Include="Interface\07.JobDataDownloadKL.cs" />
+    <Compile Include="Interface\11.EquipmentJobDataRequest.cs" />
+    <Compile Include="Interface\04.ControlModeCommand.cs" />
+    <Compile Include="Interface\14.EquipmentControlModeReply.cs" />
+    <Compile Include="Interface\05.CIMMessageCommand.cs" />
+    <Compile Include="Interface\15.EquipmentOperationModeReply.cs" />
+    <Compile Include="Interface\16.EquipmentCurrentDateTimeReply.cs" />
+    <Compile Include="Interface\06.RemoteControlCommand.cs" />
+    <Compile Include="Interface\17.EquipmentCurrentStatusReply.cs" />
+    <Compile Include="Interface\07.JobDataDownload.cs" />
+    <Compile Include="Interface\18.EquipmentCurrentRecipeReply.cs" />
+    <Compile Include="Interface\08.JobDataModifyCommand.cs" />
+    <Compile Include="Interface\19.EquipmentAlarmReportReply.cs" />
+    <Compile Include="Interface\09.RGVDispatchCommand.cs" />
+    <Compile Include="Interface\20.OperatorLoginLogoutReportReply.cs" />
+    <Compile Include="Interface\10.RecipeParameterRequest.cs" />
+    <Compile Include="Interface\36.ScrapPanelReportReply.cs" />
+    <Compile Include="Interface\35.ScanCodeReportReply.cs" />
+    <Compile Include="Interface\21.PanelInReportReply.cs" />
+    <Compile Include="Interface\12.TraceDataRequest.cs" />
+    <Compile Include="Interface\13.OperatorLoginConfirm.cs" />
+    <Compile Include="Interface\22.PanelOutReportReply.cs" />
+    <Compile Include="Interface\23.PanelReadReportReply.cs" />
+    <Compile Include="Interface\24.AbnormalPanelReportReply.cs" />
+    <Compile Include="Interface\25.EquipmentRecipeModifyReportReply.cs" />
+    <Compile Include="Interface\26.EquipmentRecipeSetupReportReply.cs" />
+    <Compile Include="Interface\27.EquipmentJobDataProcessReportReply.cs" />
+    <Compile Include="Interface\28.MaterialReadReportReply.cs" />
+    <Compile Include="Interface\29.TrayStatusReportReply.cs" />
+    <Compile Include="Interface\30.ToolsStatusReportReply.cs" />
+    <Compile Include="Interface\31.CarrierReadReportReply.cs" />
+    <Compile Include="Interface\32.RGVDispatchResultReportReply.cs" />
+    <Compile Include="Interface\33.PortStatusReportReply.cs" />
+    <Compile Include="Interface\34.ProcessDataReportReply.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

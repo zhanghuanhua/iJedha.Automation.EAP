@@ -1,0 +1,677 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ROOT>
+  <Name>iJedha.SocketMessageStructure</Name>
+  <SpecVersion>V1.0</SpecVersion>
+  <MessageType>Socket</MessageType>
+  <MessageSet>
+    <M_AreYouThereRequest Name="M_AreYouThereRequest" Direction="RECV" Description="" WaitReply="">
+      <Body>
+        <eqp_id>
+        </eqp_id>
+        <server_ip>
+        </server_ip>
+      </Body>
+    </M_AreYouThereRequest>
+    <M_AreYouThereRequestReply Name="M_AreYouThereRequestReply" Direction="SEND" Description="" WaitReply="">
+      <Body>
+        <eqp_id>
+        </eqp_id>
+        <control_mode>
+        </control_mode>
+        <operation_mode>
+        </operation_mode>
+        <eqp_status>
+        </eqp_status>
+        <recipe_name>
+        </recipe_name>
+        <recipe_path>
+        </recipe_path>
+        <cam_path>
+        </cam_path>
+        <job_id>
+        </job_id>
+        <total_panel_count>
+        </total_panel_count>
+        <process_panel_count>
+        </process_panel_count>
+      </Body>
+    </M_AreYouThereRequestReply>
+    <M_InitialDataRequest Name="M_InitialDataRequest" Direction="SEND" Description="" WaitReply="">
+      <Body>
+        <eqp_id>
+        </eqp_id>
+      </Body>
+    </M_InitialDataRequest>
+    <M_InitialDataReply Name="M_InitialDataReply" Direction="SEND" Description="" WaitReply="">
+      <Body>
+        <eqp_id>
+        </eqp_id>
+        <control_mode>
+        </control_mode>
+        <operation_mode>
+        </operation_mode>
+        <eqp_status>
+        </eqp_status>
+        <recipe_name>
+        </recipe_name>
+        <recipe_path>
+        </recipe_path>
+        <cam_path>
+        </cam_path>
+        <job_id>
+        </job_id>
+        <total_panel_count>
+        </total_panel_count>
+        <process_panel_count>
+        </process_panel_count>
+      </Body>
+    </M_InitialDataReply>
+    <M_DateTimeSyncCommand Name="M_DateTimeSyncCommand" Direction="SEND" Description="" WaitReply="">
+      <Body>
+        <eqp_id>
+        </eqp_id>
+        <date_time>
+        </date_time>
+      </Body>
+    </M_DateTimeSyncCommand>
+    <M_DateTimeSyncReply Name="M_DateTimeSyncReply" Direction="RECV" Description="" WaitReply="">
+      <Body>
+        <eqp_id>
+        </eqp_id>
+        <return_code>
+        </return_code>
+      </Body>
+    </M_DateTimeSyncReply>
+    <M_ControlModeCommand Name="M_ControlModeCommand" Direction="SEND" Description="" WaitReply="">
+      <Body>
+        <eqp_id>
+        </eqp_id>
+        <control_mode>
+        </control_mode>
+      </Body>
+    </M_ControlModeCommand>
+    <M_ControlModeCommandReply Name="M_ControlModeCommandReply" Direction="RECV" Description="" WaitReply="">
+      <Body>
+        <eqp_id>
+        </eqp_id>
+        <return_code>
+        </return_code>
+      </Body>
+    </M_ControlModeCommandReply>
+    <M_CIMMessageCommand Name="M_CIMMessageCommand" Direction="SEND" Description="" WaitReply="">
+      <Body>
+        <eqp_id>
+        </eqp_id>
+        <interval_second_time>
+        </interval_second_time>
+        <cim_message>
+        </cim_message>
+      </Body>
+    </M_CIMMessageCommand>
+    <M_CIMMessageCommandReply Name="M_CIMMessageCommandReply" Direction="RECV" Description="" WaitReply="">
+      <Body>
+        <eqp_id>
+        </eqp_id>
+        <return_code>
+        </return_code>
+      </Body>
+    </M_CIMMessageCommandReply>
+    <M_RemoteControlCommand Name="M_RemoteControlCommand" Direction="SEND" Description="" WaitReply="">
+      <Body>
+        <eqp_id>
+        </eqp_id>
+        <port_id>
+        </port_id>
+        <remote_command>
+        </remote_command>
+      </Body>
+    </M_RemoteControlCommand>
+    <M_RemoteControlCommandReply Name="M_RemoteControlCommandReply" Direction="RECV" Description="" WaitReply="">
+      <Body>
+        <eqp_id>
+        </eqp_id>
+        <return_code>
+        </return_code>
+      </Body>
+    </M_RemoteControlCommandReply>
+    <M_JobDataDownload Name="M_JobDataDownload" Direction="SEND" Description="" WaitReply="">
+      <Body>
+        <eqp_id>
+        </eqp_id>
+        <port_id>
+        </port_id>
+        <job_id>
+        </job_id>
+        <total_panel_count>
+        </total_panel_count>
+        <panel_size>
+        </panel_size>
+        <recipe_id>
+        </recipe_id>
+        <recipe_path>
+        </recipe_path>
+        <cam_path>
+        </cam_path>
+        <part_no>
+        </part_no>
+        <layer_count>
+        </layer_count>
+        <panel_list>
+          <panel />
+        </panel_list>
+        <recipe_parameter_list>
+          <recipe_parameter />
+        </recipe_parameter_list>
+      </Body>
+    </M_JobDataDownload>
+    <M_JobDataDownloadReply Name="M_JobDataDownloadReply" Direction="RECV" Description="" WaitReply="">
+      <Body>
+        <eqp_id>
+        </eqp_id>
+        <return_code>
+        </return_code>
+      </Body>
+    </M_JobDataDownloadReply>
+    <M_JobDataModifyCommand Name="M_JobDataModifyCommand" Direction="SEND" Description="" WaitReply="">
+      <Body>
+        <eqp_id>
+        </eqp_id>
+        <job_id>
+        </job_id>
+        <old_panel_count>
+        </old_panel_count>
+        <new_panel_count>
+        </new_panel_count>
+        <modify_type>
+        </modify_type>
+      </Body>
+    </M_JobDataModifyCommand>
+    <M_JobDataModifyCommandReply Name="M_JobDataModifyCommandReply" Direction="RECV" Description="" WaitReply="">
+      <Body>
+        <eqp_id>
+        </eqp_id>
+        <return_code>
+        </return_code>
+      </Body>
+    </M_JobDataModifyCommandReply>
+    <M_RGVDispatchCommand Name="M_RGVDispatchCommand" Direction="SEND" Description="" WaitReply="">
+      <Body>
+        <eqp_id>
+        </eqp_id>
+        <job_id>
+        </job_id>
+        <to_id>
+        </to_id>
+      </Body>
+    </M_RGVDispatchCommand>
+    <M_RGVDispatchCommandReply Name="M_RGVDispatchCommandReply" Direction="RECV" Description="" WaitReply="">
+      <Body>
+        <eqp_id>
+        </eqp_id>
+        <return_code>
+        </return_code>
+      </Body>
+    </M_RGVDispatchCommandReply>
+    <M_RecipeParameterRequest Name="M_RecipeParameterRequest" Direction="SEND" Description="" WaitReply="">
+      <Body>
+        <eqp_id>
+        </eqp_id>
+        <recipe_id>
+        </recipe_id>
+      </Body>
+    </M_RecipeParameterRequest>
+    <M_RecipeParameterRequestReply Name="M_RecipeParameterRequestReply" Direction="RECV" Description="" WaitReply="">
+      <Body>
+        <eqp_id>
+        </eqp_id>
+        <recipe_id>
+        </recipe_id>
+        <recipe_parameter_list>
+        </recipe_parameter_list>
+      </Body>
+    </M_RecipeParameterRequestReply>
+    <M_EquipmentJobDataRequest Name="M_EquipmentJobDataRequest" Direction="RECV" Description="" WaitReply="">
+      <Body>
+        <eqp_id>
+        </eqp_id>
+      </Body>
+    </M_EquipmentJobDataRequest>
+    <M_EquipmentJobDataRequestReply Name="M_EquipmentJobDataRequestReply" Direction="SEND" Description="" WaitReply="">
+      <Body>
+        <eqp_id>
+        </eqp_id>
+        <job_id>
+        </job_id>
+        <total_panel_count>
+        </total_panel_count>
+        <process_panel_count>
+        </process_panel_count>
+      </Body>
+    </M_EquipmentJobDataRequestReply>
+    <M_TraceDataRequest Name="M_TraceDataRequest" Direction="SEND" Description="" WaitReply="">
+      <Body>
+        <eqp_id>
+        </eqp_id>
+        <sub_eqp_id>
+        </sub_eqp_id>
+      </Body>
+    </M_TraceDataRequest>
+    <M_TraceDataRequestReply Name="M_TraceDataRequestReply" Direction="RECV" Description="" WaitReply="">
+      <Body>
+        <eqp_id>
+        </eqp_id>
+        <sub_eqp_id>
+        </sub_eqp_id>
+        <trace_data_list>
+          <trace_data />
+        </trace_data_list>
+      </Body>
+    </M_TraceDataRequestReply>
+    <M_OperatorLoginConfirm Name="M_OperatorLoginConfirm" Direction="SEND" Description="" WaitReply="">
+      <Body>
+        <eqp_id>
+        </eqp_id>
+        <operator_id>
+        </operator_id>
+        <result>
+        </result>
+      </Body>
+    </M_OperatorLoginConfirm>
+    <M_OperatorLoginConfirmReply Name="M_OperatorLoginConfirmReply" Direction="RECV" Description="" WaitReply="">
+      <Body>
+        <eqp_id>
+        </eqp_id>
+        <return_code>
+        </return_code>
+      </Body>
+    </M_OperatorLoginConfirmReply>
+    <M_EquipmentControlMode Name="M_EquipmentControlMode" Direction="RECV" Description="" WaitReply="">
+      <Body>
+        <eqp_id>
+        </eqp_id>
+        <control_mode>
+        </control_mode>
+      </Body>
+    </M_EquipmentControlMode>
+    <M_EquipmentControlModeReply Name="M_EquipmentControlModeReply" Direction="SEND" Description="" WaitReply="">
+      <Body>
+        <eqp_id>
+        </eqp_id>
+        <return_code>
+        </return_code>
+      </Body>
+    </M_EquipmentControlModeReply>
+    <M_EquipmentOperationMode Name="M_EquipmentOperationMode" Direction="RECV" Description="" WaitReply="">
+      <Body>
+        <eqp_id>
+        </eqp_id>
+        <operation_mode>
+        </operation_mode>
+      </Body>
+    </M_EquipmentOperationMode>
+    <M_EquipmentOperationModeReply Name="M_EquipmentOperationModeReply" Direction="SEND" Description="" WaitReply="">
+      <Body>
+        <eqp_id>
+        </eqp_id>
+        <return_code>
+        </return_code>
+      </Body>
+    </M_EquipmentOperationModeReply>
+    <M_EquipmentCurrentDateTime Name="M_EquipmentCurrentDateTime" Direction="RECV" Description="" WaitReply="">
+      <Body>
+        <eqp_id>
+        </eqp_id>
+        <date_time>
+        </date_time>
+      </Body>
+    </M_EquipmentCurrentDateTime>
+    <M_EquipmentCurrentDateTimeReply Name="M_EquipmentCurrentDateTimeReply" Direction="SEND" Description="" WaitReply="">
+      <Body>
+        <eqp_id>
+        </eqp_id>
+        <return_code>
+        </return_code>
+      </Body>
+    </M_EquipmentCurrentDateTimeReply>
+    <M_EquipmentCurrentStatus Name="M_EquipmentCurrentStatus" Direction="RECV" Description="" WaitReply="">
+      <Body>
+        <eqp_id>
+        </eqp_id>
+        <sub_eqp_id>
+        </sub_eqp_id>
+        <eqp_status>
+        </eqp_status>
+        <green_towner>
+        </green_towner>
+        <yellow_towner>
+        </yellow_towner>
+        <red_towner>
+        </red_towner>
+      </Body>
+    </M_EquipmentCurrentStatus>
+    <M_EquipmentCurrentStatusReply Name="M_EquipmentCurrentStatusReply" Direction="SEND" Description="" WaitReply="">
+      <Body>
+        <eqp_id>
+        </eqp_id>
+        <return_code>
+        </return_code>
+      </Body>
+    </M_EquipmentCurrentStatusReply>
+    <M_EquipmentCurrentRecipe Name="M_EquipmentCurrentRecipe" Direction="RECV" Description="" WaitReply="">
+      <Body>
+        <eqp_id>
+        </eqp_id>
+        <current_recipe_name>
+        </current_recipe_name>
+      </Body>
+    </M_EquipmentCurrentRecipe>
+    <M_EquipmentCurrentRecipeReply Name="M_EquipmentCurrentRecipeReply" Direction="SEND" Description="" WaitReply="">
+      <Body>
+        <eqp_id>
+        </eqp_id>
+        <return_code>
+        </return_code>
+      </Body>
+    </M_EquipmentCurrentRecipeReply>
+    <M_EquipmentAlarmReport Name="M_EquipmentAlarmReport" Direction="RECV" Description="" WaitReply="">
+      <Body>
+        <eqp_id>
+        </eqp_id>
+        <report_type>
+        </report_type>
+        <alarm_type>
+        </alarm_type>
+        <alarm_list>
+          <alarm />
+        </alarm_list>
+      </Body>
+    </M_EquipmentAlarmReport>
+    <M_EquipmentAlarmReportReply Name="M_EquipmentAlarmReportReply" Direction="SEND" Description="" WaitReply="">
+      <Body>
+        <eqp_id>
+        </eqp_id>
+        <return_code>
+        </return_code>
+      </Body>
+    </M_EquipmentAlarmReportReply>
+    <M_OperatorLoginLogoutReport Name="M_OperatorLoginLogoutReport" Direction="RECV" Description="" WaitReply="">
+      <Body>
+        <eqp_id>
+        </eqp_id>
+        <identify_type>
+        </identify_type>
+        <operator_id>
+        </operator_id>
+      </Body>
+    </M_OperatorLoginLogoutReport>
+    <M_OperatorLoginLogoutReportReply Name="M_OperatorLoginLogoutReportReply" Direction="SEND" Description="" WaitReply="">
+      <Body>
+        <eqp_id>
+        </eqp_id>
+        <return_code>
+        </return_code>
+      </Body>
+    </M_OperatorLoginLogoutReportReply>
+    <M_PanelInReport Name="M_PanelInReport" Direction="RECV" Description="" WaitReply="">
+      <Body>
+        <eqp_id>
+        </eqp_id>
+        <panel_in_count>
+        </panel_in_count>
+      </Body>
+    </M_PanelInReport>
+    <M_PanelInReportReply Name="M_PanelInReportReply" Direction="SEND" Description="" WaitReply="">
+      <Body>
+        <eqp_id>
+        </eqp_id>
+        <return_code>
+        </return_code>
+      </Body>
+    </M_PanelInReportReply>
+    <M_PanelOutReport Name="M_PanelOutReport" Direction="RECV" Description="" WaitReply="">
+      <Body>
+        <eqp_id>
+        </eqp_id>
+        <panel_out_count>
+        </panel_out_count>
+      </Body>
+    </M_PanelOutReport>
+    <M_PanelOutReportReply Name="M_PanelOutReportReply" Direction="SEND" Description="" WaitReply="">
+      <Body>
+        <eqp_id>
+        </eqp_id>
+        <return_code>
+        </return_code>
+      </Body>
+    </M_PanelOutReportReply>
+    <M_PanelReadReport Name="M_PanelReadReport" Direction="RECV" Description="" WaitReply="">
+      <Body>
+        <eqp_id>
+        </eqp_id>
+        <panel_id>
+        </panel_id>
+      </Body>
+    </M_PanelReadReport>
+    <M_PanelReadReportReply Name="M_PanelReadReportReply" Direction="SEND" Description="" WaitReply="">
+      <Body>
+        <eqp_id>
+        </eqp_id>
+        <return_code>
+        </return_code>
+      </Body>
+    </M_PanelReadReportReply>
+    <M_AbnoarmalPanelReport Name="M_AbnoarmalPanelReport" Direction="RECV" Description="" WaitReply="">
+      <Body>
+        <eqp_id>
+        </eqp_id>
+        <panel_id>
+        </panel_id>
+        <panel_count>
+        </panel_count>
+        <abnormal_code>
+        </abnormal_code>
+      </Body>
+    </M_AbnoarmalPanelReport>
+    <M_AbnoarmalPanelReportReply Name="M_AbnoarmalPanelReportReply" Direction="SEND" Description="" WaitReply="">
+      <Body>
+        <eqp_id>
+        </eqp_id>
+        <return_code>
+        </return_code>
+      </Body>
+    </M_AbnoarmalPanelReportReply>
+    <M_EquipmentRecipeModifyReport Name="M_EquipmentRecipeModifyReport" Direction="RECV" Description="" WaitReply="">
+      <Body>
+        <eqp_id>
+        </eqp_id>
+        <recipe_name>
+        </recipe_name>
+        <modify_code>
+        </modify_code>
+      </Body>
+    </M_EquipmentRecipeModifyReport>
+    <M_EquipmentRecipeModifyReportReply Name="M_EquipmentRecipeModifyReportReply" Direction="SEND" Description="" WaitReply="">
+      <Body>
+        <eqp_id>
+        </eqp_id>
+        <return_code>
+        </return_code>
+      </Body>
+    </M_EquipmentRecipeModifyReportReply>
+    <M_EquipmentRecipeSetupReport Name="M_EquipmentRecipeSetupReport" Direction="RECV" Description="" WaitReply="">
+      <Body>
+        <eqp_id>
+        </eqp_id>
+        <process_id>
+        </process_id>
+        <recipe_path>
+        </recipe_path>
+        <cam_path>
+        </cam_path>
+        <setup_result>
+        </setup_result>
+      </Body>
+    </M_EquipmentRecipeSetupReport>
+    <M_EquipmentRecipeSetupReportReply Name="M_EquipmentRecipeSetupReportReply" Direction="SEND" Description="" WaitReply="">
+      <Body>
+        <eqp_id>
+        </eqp_id>
+        <return_code>
+        </return_code>
+      </Body>
+    </M_EquipmentRecipeSetupReportReply>
+    <M_EquipmentJobDataProcessReport Name="M_EquipmentJobDataProcessReport" Direction="RECV" Description="" WaitReply="">
+      <Body>
+        <eqp_id>
+        </eqp_id>
+        <job_id>
+        </job_id>
+        <total_panel_count>
+        </total_panel_count>
+        <process_panel_count>
+        </process_panel_count>
+        <process_code>
+        </process_code>
+      </Body>
+    </M_EquipmentJobDataProcessReport>
+    <M_EquipmentJobDataProcessReportReply Name="M_EquipmentJobDataProcessReportReply" Direction="SEND" Description="" WaitReply="">
+      <Body>
+        <eqp_id>
+        </eqp_id>
+        <job_id>
+        </job_id>
+        <total_panel_count>
+        </total_panel_count>
+        <process_panel_count>
+        </process_panel_count>
+        <process_code>
+        </process_code>
+      </Body>
+    </M_EquipmentJobDataProcessReportReply>
+    <M_MaterialReadReport Name="M_MaterialReadReport" Direction="RECV" Description="" WaitReply="">
+      <Body>
+        <eqp_id>
+        </eqp_id>
+        <material_id>
+        </material_id>
+      </Body>
+    </M_MaterialReadReport>
+    <M_MaterialReadReportReply Name="M_MaterialReadReportReply" Direction="SEND" Description="" WaitReply="">
+      <Body>
+        <eqp_id>
+        </eqp_id>
+        <return_code>
+        </return_code>
+      </Body>
+    </M_MaterialReadReportReply>
+    <M_TrayStatusReport Name="M_TrayStatusReport" Direction="RECV" Description="" WaitReply="">
+      <Body>
+        <eqp_id>
+        </eqp_id>
+        <tray_id>
+        </tray_id>
+        <job_id>
+        </job_id>
+        <tray_status>
+        </tray_status>
+      </Body>
+    </M_TrayStatusReport>
+    <M_TrayStatusReportReply Name="M_TrayStatusReportReply" Direction="SEND" Description="" WaitReply="">
+      <Body>
+        <eqp_id>
+        </eqp_id>
+        <return_code>
+        </return_code>
+      </Body>
+    </M_TrayStatusReportReply>
+    <M_ToolsStatusReport Name="M_ToolsStatusReport" Direction="RECV" Description="" WaitReply="">
+      <Body>
+        <eqp_id>
+        </eqp_id>
+        <tools_id>
+        </tools_id>
+      </Body>
+    </M_ToolsStatusReport>
+    <M_ToolsStatusReportReply Name="M_ToolsStatusReportReply" Direction="SEND" Description="" WaitReply="">
+      <Body>
+        <eqp_id>
+        </eqp_id>
+        <return_code>
+        </return_code>
+      </Body>
+    </M_ToolsStatusReportReply>
+    <M_CarrierReadReport Name="M_CarrierReadReport" Direction="RECV" Description="" WaitReply="">
+      <Body>
+        <eqp_id>
+        </eqp_id>
+        <carrier_id>
+        </carrier_id>
+      </Body>
+    </M_CarrierReadReport>
+    <M_CarrierReadReportReply Name="M_CarrierReadReportReply" Direction="SEND" Description="" WaitReply="">
+      <Body>
+        <eqp_id>
+        </eqp_id>
+        <return_code>
+        </return_code>
+      </Body>
+    </M_CarrierReadReportReply>
+    <M_RGVDispatchResultReport Name="M_RGVDispatchResultReport" Direction="RECV" Description="" WaitReply="">
+      <Body>
+        <eqp_id>
+        </eqp_id>
+        <job_id>
+        </job_id>
+        <result>
+        </result>
+      </Body>
+    </M_RGVDispatchResultReport>
+    <M_RGVDispatchResultReportReply Name="M_RGVDispatchResultReportReply" Direction="SEND" Description="" WaitReply="">
+      <Body>
+        <eqp_id>
+        </eqp_id>
+        <return_code>
+        </return_code>
+      </Body>
+    </M_RGVDispatchResultReportReply>
+    <M_PortStatusReport Name="M_PortStatusReport" Direction="RECV" Description="" WaitReply="">
+      <Body>
+        <eqp_id>
+        </eqp_id>
+        <port_id>
+        </port_id>
+        <port_status>
+        </port_status>
+      </Body>
+    </M_PortStatusReport>
+    <M_PortStatusReportReply Name="M_PortStatusReportReply" Direction="SEND" Description="" WaitReply="">
+      <Body>
+        <eqp_id>
+        </eqp_id>
+        <return_code>
+        </return_code>
+      </Body>
+    </M_PortStatusReportReply>
+    <M_ProcessDataReport Name="M_ProcessDataReport" Direction="RECV" Description="" WaitReply="">
+      <Body>
+        <eqp_id>
+        </eqp_id>
+        <sub_eqp_id>
+        </sub_eqp_id>
+        <job_id>
+        </job_id>
+        <proc_data_list>
+          <proc_data />
+        </proc_data_list>
+      </Body>
+    </M_ProcessDataReport>
+    <M_ProcessDataReportReply Name="M_ProcessDataReportReply" Direction="SEND" Description="" WaitReply="">
+      <Body>
+        <eqp_id>
+        </eqp_id>
+        <return_code>
+        </return_code>
+      </Body>
+    </M_ProcessDataReportReply>
+  </MessageSet>
+</ROOT>
